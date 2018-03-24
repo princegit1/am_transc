@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 31, 2013 7:39:21 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.itgd.transcoder.bean.AmazobAwsJobOutputDesc" table="bitrate_master">
+    <!--<class name="com.itgd.transcoder.bean.AmazobAwsJobOutputDesc" table="amazob_aws_job_output_desc" catalog="test">-->
+    <!--<class name="com.itgd.transcoder.bean.AmazobAwsJobOutputDesc" table="amazob_aws_job_output_desc" catalog="awstranscode">-->
+        <id name="bitrateId" type="java.lang.Integer">
+            <column name="bitrate_id" />
+            <generator class="increment" />
+        </id>
+        <property name="profileId" type="java.lang.Integer">
+            <column name="profile_id" />
+        </property>
+        <property name="bitrate" type="java.lang.Integer">
+            <column name="bitrate" />
+        </property>
+        <property name="format" type="string">
+            <column name="format" length="128" not-null="true"/>
+        </property>
+          <property name="presetId" type="string">
+            <column name="preset_id" length="128" not-null="true"/>
+        </property>
+        <property name="folderName" type="string">
+            <column name="foldername" length="128" not-null="true"/>
+        </property>
+        <property name="filenameSuffix" type="string">
+            <column name="filename_suffix" length="128" />
+        </property>
+         <property name="hlsFormat" type="java.lang.Integer">
+            <column name="hls_format"/>
+        </property>
+    </class>
+</hibernate-mapping>

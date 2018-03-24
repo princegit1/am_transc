@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 31, 2013 7:39:21 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.itgd.transcoder.bean.AmazonTranscoding" table="transcoding_input" >
+    <!--<class name="com.itgd.transcoder.bean.AmazonTranscoding" table="amazon_transcoding" catalog="test">-->
+    <!--<class name="com.itgd.transcoder.bean.AmazonTranscoding" table="amazon_transcoding" catalog="awstranscode">-->
+       
+       
+        <id name="transInputId" type="java.lang.Integer">
+            <column name="trans_input_id" />
+            <generator class="increment" />
+        </id>
+        <property name="jobId" type="string">
+            <column name="job_id" length="25" />
+        </property>
+        <property name="sourceFileName" type="string">
+            <column name="source_file_name" length="100" />
+        </property>
+        <property name="jobStatus" type="string">
+            <column name="job_status" length="25" />
+        </property>
+        <property name="profileId" type="java.lang.Integer">
+            <column name="profile_id" length="10" />
+        </property>
+        
+        <property name="inputPath" type="string">
+            <column name="input_path" length="100"/>
+        </property>
+        <property name="jobCreationTime" type="timestamp">
+            <column name="job_creation_datetime" length="19" />
+        </property>
+        <property name="jobCompletionTime" type="timestamp">
+            <column name="job_completion_datetime" length="19" />
+        </property>
+        <property name="websiteId" type="java.lang.Integer">
+            <column name="website_id" length="10" />
+        </property>
+        <property name="fileDuration" type="string">
+            <column name="file_duration" length="10" />
+        </property>
+        <property name="previewImage" type="string">
+            <column name="preview_image" length="100" />
+        </property>
+        <property name="jobMarker" type="string">
+            <column name="job_marker" length="128" />
+        </property>
+       
+    </class>
+</hibernate-mapping>

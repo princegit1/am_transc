@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <!--<schema-selection match-catalog="vr_itbc"/>-->
+  <!--<schema-selection match-catalog="test"/>-->
+ <!--  <schema-selection match-catalog="aws"/>
+  <table-filter match-name="amazon_transcoding"/>    
+  <table-filter match-name="amazon_aws_job_desc"/>    
+  <table-filter match-name="amazob_aws_job_output_desc"/>    
+  <table-filter match-name="joboutput"/> -->
+  
+  
+</hibernate-reverse-engineering>

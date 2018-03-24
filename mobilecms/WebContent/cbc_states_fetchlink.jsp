@@ -1,0 +1,84 @@
+<%
+	String fname = (String)session.getAttribute("fname");
+	if(fname == null)
+	{
+		response.sendRedirect("index.jsp?msg=session exp.");
+	}
+%>
+<%@ page import="java.sql.*"%>
+<%@ page import="java.util.*"%>
+<%@ page import="java.util.Date" %>
+<%@ page import="conn.*" %>
+<%
+	ResultSet rs=null,rs1=null;
+	Connection cn=null;
+	Statement stmt=null,stmt1=null;
+	String upQuery = "";
+	String categoryType="";
+	String serviceProvider="";
+	int messageSize = 200;
+	int i=1;
+	int k=1;
+	String option="";
+%>
+<HTML><HEAD><TITLE>Mobile Service</TITLE>
+</HEAD>
+<BODY>
+
+<%
+int totalMessage=0;
+String stateName = request.getParameter("categorystate");
+
+	try
+	{
+		
+		
+		upQuery="select * from category_master where  category_type like '%"+stateName+"%' and category_id>260 and service_provider='cbc'";
+		System.out.println(upQuery);
+		AdminConn adminConn = AdminConn.getInstance();
+		cn = adminConn.getConnection();
+		stmt=cn.createStatement();
+		rs=stmt.executeQuery(upQuery + " order by category_type");
+		while(rs.next())
+		{
+		totalMessage=rs.getRow();		
+		upQuery="select msg_id,message1,DATE_FORMAT(run_date,'%Y-%m-%d') run_date from message_details where msg_id=(select max(msg_id) from message_details where category_id="+rs.getString("category_id")+") and category_id="+rs.getString("category_id");
+					//messageSize=rs.getString("message1").length();
+					stmt1=cn.createStatement();
+					rs1=stmt1.executeQuery(upQuery);
+					if(rs1.next())
+					{
+					if(rs1.getString("message1").contains("1#")&&rs1.getString("message1").contains("2#")){
+%>
+<b><%=rs.getString("category_type") %></b>:-<%=rs1.getString("message1")%>
+<br/><br/>
+<%}else{
+%>
+<b><%=rs.getString("category_type") %></b>: 
+<font STYLE="color: red;"> WRONG CONTENT FORMAT</font>
+<br/><br/>
+<%
+}}i++;}
+	}
+	catch(Exception ee)
+	{
+		out.print("errr"+ee);
+	}
+	finally
+	{
+		if(rs!=null)
+		rs.close();
+		if(stmt!=null)
+		stmt.close();
+		if(rs1!=null)
+		rs1.close();
+		if(stmt1!=null)
+		stmt1.close();
+		if(cn!=null)
+		cn.close();
+		
+	}
+%>
+
+</BODY>
+</HTML>

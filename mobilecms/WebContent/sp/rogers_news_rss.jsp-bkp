@@ -1,0 +1,80 @@
+<?xml version="1.0"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel><%@ page import="java.sql.*,conn.*"%><%
+ResultSet rs=null;
+Connection cn=null;
+Statement stmt=null;
+String sectionName="";
+String date="";
+String catid="";
+String catsection="";
+
+String section = request.getParameter("category");
+if(section!=null && !section.equals("")){
+if(section.equals("national-india")||section.equals("national-china")||
+section.equals("national-philippines")||section.equals("national-latinamerica")||
+section.equals("national-caribbean")||section.equals("national-middleeast")||
+section.equals("regional-india")||section.equals("business-india")||
+section.equals("business-china")||section.equals("business-philippines")||section.equals("business-latinamerica")
+||section.equals("business-caribbean")||section.equals("business-middleeast")||
+section.equals("sports-india")||section.equals("sports-china")||section.equals("sports-philippines")||
+section.equals("sports-latinamerica")||section.equals("sports-caribbean")||section.equals("sports-middleeast")||section.equals("entertainment")){
+
+int count = 0;
+try
+{	
+	AdminConn adminConn = AdminConn.getInstance();
+	cn = adminConn.getConnection();
+	String selectQuery="select a.message1,DATE_FORMAT(a.RECORD_DATE, '%a, %d %b %Y %T IST' ) as date,b.CATEGORY_ID from message_details a, category_master b where a.category_id=b.category_id  and b.service_provider='rogerscanada' and  b.status='ACTIVE' and b.CATEGORY_TYPE='"+section+"' order by a.MSG_ID DESC  limit 1   ";
+	stmt=cn.createStatement();
+	//System.out.println("---->"+selectQuery);
+	rs=stmt.executeQuery(selectQuery);	
+	
+	while(rs.next()){
+	if(!section.equals("entertainment")){
+	catsection=section.substring(0,section.indexOf("-")).toUpperCase()+" NEWS";
+	sectionName=section.substring(section.indexOf("-")+1,section.length()).toUpperCase();
+	}else{
+	sectionName=section.toUpperCase();
+	catsection=section.toUpperCase()+" NEWS";
+	}
+	
+  if (count == 0) {
+%>
+<title>India Today | <%=catsection%></title>
+<description>India Today</description>
+<link>http://indiatoday.intoday.in/</link>
+<lastBuildDate><%=rs.getString("date") %></lastBuildDate>
+<generator>FeedCreator 1.7.2</generator>
+<image>
+<url>http://mobileservice.digitaltoday.in/content/img/rss/<%=section%>.jpg</url>
+<title>India Today | <%=catsection%></title>			
+<description>India Today</description>
+</image>
+<%} %>
+<item>
+<title><%=sectionName%></title>
+<link>http://mobileservice.digitaltoday.in/content/img/rss/<%=section%>-128.jpg</link>
+<description> <%=rs.getString("message1")%></description>
+</item><%count++;} %>
+</channel>
+</rss><% 
+
+}
+catch(Exception e)
+{
+System.out.print(e.toString());
+}
+finally
+{
+	rs = null;
+	stmt = null;
+	cn=null;
+}
+}
+else{
+out.print("CATEGORY NOT FOUND.....");
+}
+}else{
+out.print("CATEGORY NOT FOUND.....");
+}
+%>

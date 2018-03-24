@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 31, 2013 7:39:21 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+
+    <class name="com.itgd.transcoder.bean.TranscodingProcessLog" table="transcoding_process_log" >
+         <id name="transProcessId" type="java.lang.Integer">
+            <column name="trans_process_id" />
+            <generator class="increment" />
+        </id>
+             <property name="sourcePath" type="string">
+            <column name="source_path" length="300"/>
+        </property>
+         <property name="destinationPath" type="string">
+            <column name="destination_path" length="300" />
+        </property>
+          <property name="outputStatus" type="string">
+            <column name="output_status" length="30" />
+        </property>
+        <property name="fileCreationTime" type="timestamp">
+            <column name="file_creation_time" length="19" />
+        </property>
+        <property name="profileId" type="java.lang.Integer">
+            <column name="profile_id" />
+        </property>
+            
+    </class>
+</hibernate-mapping>

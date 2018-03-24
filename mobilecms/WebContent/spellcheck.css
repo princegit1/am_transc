@@ -1,0 +1,21 @@
+body
+{
+}
+
+input.button
+{
+	font-family:'Tahoma,Arial,Helvetica';
+	font-size:10pt; 
+	border:1px solid #b5bed5; 
+	background-color:#dddddd; 
+	width: 90px;
+}
+
+input.button1
+{
+	font-family:'Tahoma,Arial,Helvetica';
+	font-size:10pt; 
+	border:1px solid #082565; 
+    background-color=#b5bed5;
+	width: 90px;
+}

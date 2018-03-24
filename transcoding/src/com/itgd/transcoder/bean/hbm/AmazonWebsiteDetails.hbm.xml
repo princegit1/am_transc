@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 31, 2013 7:39:21 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.itgd.transcoder.bean.AmazonWebsiteDetails" table="website_master" >
+    <!--<class name="com.itgd.transcoder.bean.AmazonAwsJobDesc" table="amazon_aws_job_desc" catalog="test">-->
+    <!--<class name="com.itgd.transcoder.bean.AmazonAwsJobDesc" table="amazon_aws_job_desc" catalog="awstranscode">-->
+        <id name="websiteId" type="java.lang.Integer">
+            <column name="website_id" />
+            <generator class="increment" />
+        </id>
+        <property name="websiteName" type="string">
+            <column name="website_name" length="25"/>
+        </property>
+        
+        <property name="websiteStatus" type="java.lang.Integer">
+            <column name="website_status" length="1" />
+        </property>
+        
+        <property name="websiteSource" type="string">
+            <column name="source" length="25" />
+        </property>
+         
+    </class>
+</hibernate-mapping>

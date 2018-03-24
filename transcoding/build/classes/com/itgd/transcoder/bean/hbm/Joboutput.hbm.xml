@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 31, 2013 7:39:21 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+
+    <class name="com.itgd.transcoder.bean.Joboutput" table="transcoding_output" >
+    <!--<class name="com.itgd.transcoder.bean.Joboutput" table="joboutput" catalog="test">-->
+    <!--<class name="com.itgd.transcoder.bean.Joboutput" table="joboutput" catalog="awstranscode">-->
+        <id name="transOutputid" type="java.lang.Integer">
+            <column name="trans_output_id" />
+            <generator class="increment" />
+        </id>
+        <property name="transIntputId" type="java.lang.Integer">
+            <column name="trans_input_id"  />
+        </property>
+        <property name="outputPath" type="string">
+            <column name="output_path" length="100"/>
+        </property>
+        <property name="bitrateId" type="java.lang.Integer">
+            <column name="bitrate_id"  />
+        </property>
+     
+        <property name="outputStatus" type="string">
+            <column name="output_status" length="25" />
+        </property>
+        <property name="outputStatusDetail" type="string">
+            <column name="output_status_detail" />
+        </property>
+        <property name="jobId" type="string">
+            <column name="job_id" length="25" />
+        </property>
+        <property name="fileCreationTime" type="timestamp">
+            <column name="file_creation_time" length="19" />
+        </property>
+        <property name="fileCompletionTime" type="timestamp">
+            <column name="file_completion_time" length="19" />
+        </property>        
+        <property name="fileDuration" type="string">
+            <column name="file_duration" length="50"/>
+        </property>
+        <property name="outputPresetId" type="string">
+            <column name="output_presetid" length="128"/>
+        </property>
+        <property name="vedioType" type="string">
+            <column name="vedio_type" length="128"/>
+        </property>
+        
+    </class>
+</hibernate-mapping>

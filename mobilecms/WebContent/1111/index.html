@@ -1,0 +1,102 @@
+<html>
+<head>
+<!--
+ * The software is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied.
+ *
+ * The Initial Developer of this code is SoftCorporation LLC.
+ * Usage of Suggester library (spellcheck) is allowed only with reference to SoftCorporation LLC.
+ * which means including on a page which uses this code (or modified code) 
+ * the visible and clickable link to: http://www.softcorporation.com/products/suggester
+ * Additional restrictions to Suggester software apply, see license for more.
+ * Copyright (C) 2000-2006 SoftCorporation LLC. All Rights Reserved.
+-->
+<title>English Spell Check (English/American)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script language="JavaScript" type="text/JavaScript" src="spellcheck.js"></script>
+</head>
+<body>
+
+<script language="javascript" type="text/javascript">
+function getCursorPosition(field)
+{
+  field.focus();
+  var sel = document.selection.createRange();
+  var storedRange = sel.duplicate();
+  storedRange.moveToElementText(field);
+  storedRange.setEndPoint('EndToEnd', sel);
+  return storedRange.text.length - sel.text.length;
+}
+function spellCheckStart(field)
+{
+  pos = getCursorPosition(field);
+  if (pos > 0)
+  {
+    if (!confirm("Do you wish to check from current cursor position?"))
+    {
+	  return;
+    }
+  }
+  spellcheck(field, field.value, pos, 10);
+}
+function spellCheckEdit(field, text)
+{
+  field.value=text;
+}
+function getkey(evt)
+{
+  if (window.event) return window.event.keyCode
+  else return (evt.keyCode || evt.which || evt.charCode);
+}
+function processEvt(form, evt)
+{
+  var se = false;
+  if (getkey(evt) == 118) // F7
+  {
+    spellCheckStart(form.text);
+	se = true;
+  }
+  if (se)
+  {
+    if (evt.preventDefault) 
+    {
+	  evt.preventDefault();
+    }
+    if (evt.stopPropagation) 
+    {
+	  evt.stopPropagation();
+    }
+//	evt.returnValue = false;
+	evt.cancelBubble = true;
+	return false;
+  }
+  return true;
+}
+</script>
+
+<form name="cyr" onsubmit="return false;" onkeydown="return processEvt(this, event)">
+  <table width="578" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td align="center" colspan="3"><big><strong>Suggester Spell Check Test for Microsoft Internet Explorer (press F7)</strong></big></td>
+    </tr>
+    <tr>
+      <td align="center" colspan="3">
+        <textarea name="text" rows="24" cols="72"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td>&nbsp;<small>Click to clear text area</small></td>
+      <td align="right"><small>Click to run Suggester - Spell Check</small>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;<input onclick="javascript:window.document.eng.text.value=''"
+	  type="button" value="Clear text"></td>
+      <td align="right"><input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.text)">&nbsp;</td>
+    </tr>
+  </table>
+</form>
+
+<h5>Copyright © 2000 <a href="http://www.softcorporation.com">SoftCorporation LLC.</a>
+All rights reserved.</h5>
+</body>
+</html>

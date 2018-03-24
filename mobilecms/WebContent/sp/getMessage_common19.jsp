@@ -1,0 +1,126 @@
+<%@ page import="java.sql.*"%>
+<%@ page import="java.util.*"%>
+<%@ page import="java.util.Date" %>
+<%@ page import="conn.*" %>
+
+<%
+	String username = request.getParameter("username");
+	String password = request.getParameter("password");
+	String serviceProvider = request.getParameter("serviceProvider");
+	String category = request.getParameter("category");
+	String alertDate = request.getParameter("ALTER-DATE");
+
+	int totalMsg = 0;
+	int categoryId = 0;
+	if(username.equals("itgo") & password.equals("itgo") & serviceProvider.equals("ITGO"))
+	{
+		Connection cn=null;
+		ResultSet rs = null;
+		Statement stmt = null;
+		username = "airtel";
+		password = "airtel";
+		if(category.equals("Cricket scores")){
+		serviceProvider = "MTNLDL";
+		}
+		else {serviceProvider = "AIRTEL";}
+		AdminConn adminConn = AdminConn.getInstance();
+		try
+		{
+			cn = adminConn.getConnection();	
+			String upQuery1 = "select * from category_master a,service_provider b where b.sp_name = a.service_provider and service_provider='"+serviceProvider+"' and category_type='"+category+"' and sp_username='"+username+"' and sp_password='"+password+"'";
+			//out.println(upQuery1);
+			cn = adminConn.getConnection();
+			stmt=cn.createStatement();
+			rs=stmt.executeQuery(upQuery1);
+			while(rs.next())
+			{
+				categoryId = rs.getInt("category_id");
+				totalMsg = rs.getInt("total_message");
+			}
+		}
+		catch(Exception e)
+		{
+			out.println(e.toString());
+		}
+		finally
+		{
+			rs.close();
+			stmt.close();
+			cn.close();
+		}
+
+		if (totalMsg ==0)
+		{
+%>
+			No Message....
+<%	
+			return;
+		}
+	String upQuery="";
+		for(int k=1;k<=totalMsg;k++)
+		{
+			ResultSet rs3=null;
+			Connection cn3=null;
+			Statement stmt3=null;
+			try
+			{	
+				if((categoryId==20) || (categoryId==21) || (categoryId==22))
+				{
+					upQuery="select header,footer,total_message,message1	,COALESCE(message2,'No Message')message2,COALESCE(message3,'No Message')message3,COALESCE(message4,'No Message')message4,COALESCE(message5,'No Message')message5 ,COALESCE(message6,'No Message')message6,,COALESCE(message7,'No Message')message7 from message_details a, category_master b where a.category_id=b.category_id and b.service_provider='AIRTEL' and a.MSG_ID=(SELECT max(MSG_ID) from message_details WHERE category_id='"+categoryId+"' )";
+				}
+				
+				else
+				{
+					upQuery="select header,footer,total_message,COALESCE(message1,'')message1	,COALESCE(message2,'No Message')message2,COALESCE(message3,'No Message')message3,COALESCE(message4,'No Message')message4,COALESCE(message5,'No Message')message5 from message_details a, category_master b where a.category_id=b.category_id and b.service_provider='"+serviceProvider+"' and DATE_FORMAT(run_date, '%e%m%Y')='"+alertDate+"' and a.category_id="+categoryId;
+					//out.println(upQuery);
+					
+				}
+				cn3 = adminConn.getConnection();
+				stmt3=cn3.createStatement();
+				rs3=stmt3.executeQuery(upQuery);
+				if(rs3.next())
+				{
+					if(rs3.getString("message"+k+"").length()>0)
+					{
+%>
+						<%=rs3.getString("header")%>
+						<%=rs3.getString("message"+k+"")%>
+						<%=rs3.getString("footer")%>
+						
+<%
+					}
+					else
+					{
+%>
+						&nbsp;
+<%	
+					}
+				}
+				else
+				{
+%>
+					No Message..
+<%	
+				}
+			}
+			catch(NullPointerException nex)
+			{
+				out.println(nex.toString());
+			}
+			catch(Exception e)
+			{
+				out.println(e.toString());
+			}
+			finally
+			{
+				rs3.close();
+				stmt3.close();
+				cn3.close();
+			}
+		}
+	}
+	else
+	{
+		out.println("Please check the URL parameter. <b>Something Must Be Wrong with Parameters.</b>");
+	}
+%>

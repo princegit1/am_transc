@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+           version="2.5">	
+	
+	<servlet>
+   	 	<servlet-name>getElectionNewsHtml</servlet-name>
+    		<servlet-class>com.itgd.server.getElectionNewsHtml</servlet-class>
+  	</servlet>
+ 	 <servlet>  
+   		 <servlet-name>getMobileNewsHtml</servlet-name>
+    		<servlet-class>com.itgd.server.getMobileNewsHtml</servlet-class>
+ 	 </servlet>
+	<servlet>
+    		<servlet-name>ElectionNews</servlet-name>
+    		<servlet-class>com.itgd.server.ElectionNews</servlet-class>
+  	</servlet>
+ 	<servlet>
+    		<servlet-name>I2iHeadLines</servlet-name>
+    		<servlet-class>com.itgd.server.I2iHeadLines</servlet-class>
+ 	 </servlet>
+	<servlet>
+    		<servlet-name>I2iAllHeadlines</servlet-name>
+    		<servlet-class>com.itgd.server.I2iAllHeadlines</servlet-class>
+  	</servlet>
+ 	<servlet>
+    		<servlet-name>getElectionNewsXml</servlet-name>
+    		<servlet-class>com.itgd.server.getElectionNewsXml</servlet-class>
+  	</servlet>
+
+ 	<servlet>
+    		<servlet-name>AirtelUssd</servlet-name>
+    		<servlet-class>com.itgd.server.AirtelUssd</servlet-class>
+  	</servlet>
+	<servlet>
+   		 <servlet-name>AirtelUssdHeadlines</servlet-name>
+    		<servlet-class>com.itgd.server.AirtelUssdHeadlines</servlet-class>
+  	</servlet>
+  	<servlet>
+   		 <servlet-name>PunjabNews</servlet-name>
+   		 <servlet-class>com.itgd.server.PunjabNews</servlet-class>
+ 	 </servlet>
+
+<servlet>
+    <servlet-name>getPunjabNews</servlet-name>
+    <servlet-class>com.itgd.server.getPunjabNews</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PoliticalNews</servlet-name>
+    <servlet-class>com.itgd.server.PoliticalNews</servlet-class>
+  </servlet>
+<servlet>
+    <servlet-name>MobilePoliticalNews</servlet-name>
+    <servlet-class>com.itgd.server.MobilePoliticalNews</servlet-class>
+  </servlet>
+<servlet>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>com.itgd.server.TestServlet</servlet-class>
+  </servlet>
+
+
+<servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/sp/test</url-pattern>
+  </servlet-mapping>
+
+
+<servlet-mapping>
+    <servlet-name>MobilePoliticalNews</servlet-name>
+    <url-pattern>/sp/polnews</url-pattern>
+  </servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>getPunjabNews</servlet-name>
+    <url-pattern>/sp/punjabnews</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PoliticalNews</servlet-name>
+    <url-pattern>/sp/getpolnews</url-pattern>
+  </servlet-mapping>
+
+ 	 <servlet-mapping>
+    		<servlet-name>PunjabNews</servlet-name>
+   		 <url-pattern>/sp/pnews</url-pattern>
+ 	 </servlet-mapping>
+ 	<servlet-mapping>
+    		<servlet-name>getElectionNewsXml</servlet-name>
+    		<url-pattern>/sp/getElectionNewsXml</url-pattern>
+ 	 </servlet-mapping>
+
+	<servlet-mapping>
+   		 <servlet-name>I2iAllHeadlines</servlet-name>
+   		 <url-pattern>/sp/i2iall</url-pattern>
+  	</servlet-mapping>
+  	<servlet-mapping>
+    		<servlet-name>getElectionNewsHtml</servlet-name>
+   		 <url-pattern>/sp/getElectionNewsHtml</url-pattern>
+  	</servlet-mapping>
+ 	 <servlet-mapping>
+   		 <servlet-name>getMobileNewsHtml</servlet-name>
+    		<url-pattern>/sp/getMobileNewsHtml</url-pattern>
+ 	 </servlet-mapping>
+	<servlet-mapping>
+    		<servlet-name>ElectionNews</servlet-name>
+    		<url-pattern>/sp/enews</url-pattern>
+  	</servlet-mapping>
+ 	<servlet-mapping>
+    		<servlet-name>I2iHeadLines</servlet-name>
+    		<url-pattern>/sp/i2iheadlines</url-pattern>
+  	</servlet-mapping>
+	 <servlet-mapping>
+   	 <servlet-name>AirtelUssd</servlet-name>
+   	 <url-pattern>/sp/airtelussd</url-pattern>
+ 	 </servlet-mapping>
+	<servlet-mapping>
+   		 <servlet-name>AirtelUssdHeadlines</servlet-name>
+    		<url-pattern>/sp/airtelall</url-pattern>
+  	</servlet-mapping>
+	
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
+	

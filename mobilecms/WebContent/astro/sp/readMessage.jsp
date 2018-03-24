@@ -1,0 +1,1 @@
+<%=request.getParameter("header")%><%=request.getParameter("message")%><%=request.getParameter("footer")%>

@@ -1,0 +1,1699 @@
+<html>
+<head>
+
+<title>Send Regional News Content - ITGO</title></head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script language="JavaScript" type="text/JavaScript" src="spellcheck.js"></script>
+
+
+<script language="JavaScript">
+<!--
+function checkEmpty()
+{	
+
+		if(document.myNews.N1AP.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : AP");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1AP.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : AP");
+			return false;
+		}		
+
+		if(document.myNews.N1ASM.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : ASSAM");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1ASM.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : ASSAM");
+			return false;
+		}		
+
+		if(document.myNews.N1BHR.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : BIHAR");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1BHR.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : BIHAR");
+			return false;
+		}		
+
+		if(document.myNews.N1CHN.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : CHENNAI");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1CHN.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : CHENNAI");
+			return false;
+		}		
+
+		if(document.myNews.N1DEL.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : DELHI");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1DEL.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : DELHI");
+			return false;
+		}		
+
+		if(document.myNews.N1GUJ.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : Gujarat");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1GUJ.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : Gujarat");
+			return false;
+		}		
+
+		if(document.myNews.N1HRY.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : HARYANA");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1HRY.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : HARYANA");
+			return false;
+		}		
+
+		if(document.myNews.N1HP.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : HP");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1HP.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : HP");
+			return false;
+		}		
+
+		if(document.myNews.N1JK.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : Jammu Kashmir");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1JK.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : Jammu Kashmir");
+			return false;
+		}		
+
+		if(document.myNews.N1KER.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : KERALA");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1KER.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : KERALA");
+			return false;
+		}		
+
+		if(document.myNews.N1KK.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : KK");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1KK.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : KK");
+			return false;
+		}		
+
+		if(document.myNews.N1KOL.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : KOLKATA");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1KOL.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : KOLKATA");
+			return false;
+		}		
+
+		if(document.myNews.N1MP.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : MP");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1MP.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : MP");
+			return false;
+		}		
+
+		if(document.myNews.N1MAH.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : Maharastra");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1MAH.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : Maharastra");
+			return false;
+		}		
+
+		if(document.myNews.N1MUM.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : Mumbai");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1MUM.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : Mumbai");
+			return false;
+		}		
+
+		if(document.myNews.N1NE.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : NORTHEAST");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1NE.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : NORTHEAST");
+			return false;
+		}		
+
+		if(document.myNews.N1ORI.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : ORISSA");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1ORI.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : ORISSA");
+			return false;
+		}		
+
+		if(document.myNews.N1PUN.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : PUNJAB");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1PUN.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : PUNJAB");
+			return false;
+		}		
+
+		if(document.myNews.N1RAJ.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : Rajasthan");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1RAJ.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : Rajasthan");
+			return false;
+		}		
+
+		if(document.myNews.N1TN.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : TN");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1TN.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : TN");
+			return false;
+		}		
+
+		if(document.myNews.N1UPE.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : UP East");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1UPE.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : UP East");
+			return false;
+		}		
+
+		if(document.myNews.N1UPW.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : UPW");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1UPW.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : UPW");
+			return false;
+		}		
+
+		if(document.myNews.N1WB.value.length > 310)
+		{
+			alert("Check : Total of 5 News Exceeds Max. Lenght of 310 in Circle : WESTBENGAL");
+			return false;
+		}		
+
+		if(!validNews(document.myNews.N1WB.value))
+		{
+			alert("Check : $ and # are not allowed as part of News in Circle : WESTBENGAL");
+			return false;
+		}		
+
+		return true;
+}
+
+function validNews(val)
+{
+	if(val.indexOf("#") != -1 || val.indexOf("$") != -1)
+	{  
+	   return false;
+	}
+	else
+	{ 
+		return true; 
+	}
+}
+-->
+</script> 
+<link href="/content/styles/main.css" rel="stylesheet" type="text/css">
+<body>
+<script language="javascript" type="text/javascript">
+function getCursorPosition(field)
+{
+  field.focus();
+  var sel = document.selection.createRange();
+  var storedRange = sel.duplicate();
+  storedRange.moveToElementText(field);
+  storedRange.setEndPoint('EndToEnd', sel);
+  return storedRange.text.length - sel.text.length;
+}
+function spellCheckStart(field)
+{
+  pos = getCursorPosition(field);
+  if (pos > 0)
+  {
+    if (!confirm("Do you wish to check from current cursor position?"))
+    {
+	  return;
+    }
+  }
+  spellcheck(field, field.value, pos, 10);
+}
+function spellCheckEdit(field, N1AP)
+{
+  field.value=N1AP;
+}
+function getkey(evt)
+{
+  if (window.event) return window.event.keyCode
+  else return (evt.keyCode || evt.which || evt.charCode);
+}
+function processEvt(form, evt)
+{
+  var se = false;
+  if (getkey(evt) == 118) // F7
+  {
+    spellCheckStart(form.N1AP);
+	se = true;
+  }
+  if (se)
+  {
+    if (evt.preventDefault) 
+    {
+	  evt.preventDefault();
+    }
+    if (evt.stopPropagation) 
+    {
+	  evt.stopPropagation();
+    }
+//	evt.returnValue = false;
+	evt.cancelBubble = true;
+	return false;
+  }
+  return true;
+}
+</script>
+
+<table width="100%" border="2" cellspacing="0" cellpadding="0">
+  <tr>
+	<td class="rwbckgr" align="center">
+	<center>
+<font color="red"><b>
+
+</b></font>
+</center>
+
+	<form name="cyr" onsubmit="return false;" onkeydown="return processEvt(this, event)">
+	  <P class="topic"><br>Send Regional News<BR>
+	  <a href="/content/sp/news.html" target="_blank">Check Existing</a></P>
+
+
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1AP" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>AP</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1AP)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenAP" value="AP">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	AP#AP: 1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.Ongole: Sub Inspector caught pilfering power 5.Air Deccan to launch Bangalore-Vijayawada service from October 29. Pwrd by Headlines Today<br><br>
+	Total Character: 303
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1ASM" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>ASSAM</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1ASM)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenASM" value="ASM">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	ASM#ASS:1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.BKBS Members take out rally in Tinsukia against ASEB privatization 5.Chabua:Activists take out rally against sale of gutkha.Pwrd by Headlines Today<br><br>
+	Total Character: 314
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1BHR" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>BIHAR</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1BHR)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenBHR" value="BHR">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	BHR#BIH:1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.Patna: Sub-divisional officer held in connection with a land scam 5.Patna: 8-year-old killed by speeding car. Pwrd by Headlines Today<br><br>
+	Total Character: 300
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1CHN" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>CHENNAI</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1CHN)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenCHN" value="CHN">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	CHN#CHE:1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.Chennai Mayor M. Subramanian inspects basic amenities at Nesapakkam 5.Chennai: Man murdered at Choolaimedu; two surrender. Pwrd by Headlines Today<br><br>
+	Total Character: 313
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1DEL" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>DELHI</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1DEL)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenDEL" value="DEL">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	DEL#DEL:1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.Delhi zone of NCB seizes 1 kg. cocaine from Ludhiana-based woman 5.Najafgarh:CRPF personnel kills wife after argument. Pwrd by Headlines Today<br><br>
+	Total Character: 309
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1GUJ" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>Gujarat</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1GUJ)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenGUJ" value="GUJ">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	GUJ#GUJ:1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.Vadodara: Two boys drown in Dev river during Ganesh immersion 5.Vadodara: Woman torched by in-laws for not bearing child. Pwrd by Headlines Today<br><br>
+	Total Character: 312
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1HRY" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>HARYANA</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1HRY)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenHRY" value="HRY">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	HRY#HAR:1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.Per Capita Investment highest in Haryana, says Hooda 5.Hissar: Three die after consuming suspected spurious liquor. Pwrd by Headlines Today<br><br>
+	Total Character: 306
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1HP" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>HP</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1HP)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenHP" value="HP">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	HP#HP: 1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.HP to double relief and rehabilitation for ex-servicemen 5.Mandi: Businessman, son end lives over financial troubles. Pwrd by Headlines Today<br><br>
+	Total Character: 307
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1JK" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>Jammu Kashmir</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1JK)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenJK" value="JK">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	JK#JK: 1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.Srinagar: 5 militants, SPO killed in separate encounters 5.J-K Tourism deptt. to beautify shrine of Hazrat Syed Janbaz Wali.Pwrd by Headlines Today<br><br>
+	Total Character: 313
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1KER" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>KERALA</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1KER)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenKER" value="KER">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	KER#KER:1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.Kochi:Maths Olympiad to be held on Oct. 7 at AC School 5.Kerala Finance Minister to launch work on Water Scheme at Kollam.Pwrd by Headlines Today<br><br>
+	Total Character: 312
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1KK" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>KK</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1KK)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenKK" value="KK">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	KK#KK: 1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.Bangalore gets A-1 city status 5.Air Deccan to launch Bangalore-Vijayawada service. Pwrd by Headlines Today<br><br>
+	Total Character: 273
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1KOL" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>KOLKATA</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1KOL)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenKOL" value="KOL">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	KOL#KOL:1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.Kolkata:4 killed in cracker-factory fire near Dankuni in Hooghly 5.Indian Idol Prasant Tamang felicitated by Kolkata Police.Pwrd by Headlines Today<br><br>
+	Total Character: 314
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1MP" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>MP</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1MP)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenMP" value="MP">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	MP#MP: 1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.MP HC directs state govt. to provide Rs.10000 each to SSP displaced 5.Chambal:Eco-Development Board plans to boost tourism. Pwrd by Headlines Today<br><br>
+	Total Character: 313
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1MAH" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>Maharastra</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1MAH)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenMAH" value="MAH">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	MAH#MAH:1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.SpiceJet to introduce direct weekly flight between Pune, Ahmedabad 5.29 hotels under Nagpur Municipal Corporation scanner. Pwrd by Headlines Today<br><br>
+	Total Character: 313
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1MUM" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>Mumbai</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1MUM)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenMUM" value="MUM">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	MUM#MUM:1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.Jubiliant Team India reaches Mumbai 5.Swan Mills Ltd. planning realty projects in Mumbai. Pwrd by Headlines Today<br><br>
+	Total Character: 280
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1NE" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>NORTHEAST</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1NE)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenNE" value="NE">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	NE#NE: 1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.Two hardcore ULFA militants killed at Dibrugarh in Assam 5.Meghalaya team enters semi-finals of Subroto Cup. Pwrd by Headlines Today<br><br>
+	Total Character: 298
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1ORI" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>ORISSA</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1ORI)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenORI" value="ORI">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	ORI#ORI:1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.Orissa unit of INTAC urges CM Patnaik to look after neglected temples 5.Over 16 lakhs hit by Orissa floods.Pwrd by Headlines Today<br><br>
+	Total Character: 297
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1PUN" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>PUNJAB</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1PUN)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenPUN" value="PUN">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	PUN#PUN:1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.Punjab govt. to give all tourism complexes on lease 5.Rupnagar: One more witness turns hostile in Langah case. Pwrd by Headlines Today<br><br>
+	Total Character: 301
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1RAJ" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>Rajasthan</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1RAJ)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenRAJ" value="RAJ">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	RAJ#RAJ:1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.CP Joshi appointed new Rajasthan Congress president 5.Rajasthan to ensure power for rabi crop season: Rajasthan govt. Pwrd by Headlines Today<br><br>
+	Total Character: 308
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1TN" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>TN</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1TN)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenTN" value="TN">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	TN#TN: 1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.Virudhunagar: Four held in connection with gang rape 5.Theni: Intelligence Bureau seizes ganja. Pwrd by Headlines Today<br><br>
+	Total Character: 285
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1UPE" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>UP East</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1UPE)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenUPE" value="UPE">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	UPE#UPE:1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.Etah: SP workers stage protest against the policies of BSP 5.Agra: Former Ambedkar varsity VC A.S. Kukla dead. Pwrd by Headlines Today<br><br>
+	Total Character: 301
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1UPW" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>UPW</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1UPW)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenUPW" value="UPW">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	UPW#UPW:1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.Disproportionate assets case:Former UP Chief Secy. arrested for tampering with Evidence 5.Lucknow:Fire breaks out at CSMMU. Pwrd by Headlines Today<br><br>
+	Total Character: 314
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+<TABLE align=center border=1 cellPadding=0 cellSpacing=0 width="100%">
+<tr valign="top">
+	<td width="50%">
+	  <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width="70%">
+	    <TR class="formtdbg"> 
+	      <TD>
+			<TABLE border=0 cellPadding=3 cellSpacing=1 width="100%">
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >Service Name :</TD>
+				<TD width="57%"> 
+				  <select name="serviceName" >
+		             <option value="NEWS" selected>NEWS - Daily Regional News </option>
+				  </select>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="3" >News <span class="mandatory">* 
+				  </span>:</TD>
+				<TD width="57%"> 
+	             <textarea name="N1WB" cols="60" rows="5" value=""></textarea>
+				</TD>
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" >Circle :</TD>                        
+				<TD width="57%"><b>WESTBENGAL</b> 
+				<td>
+					<input type="button" value="   Check   " name="check" onclick="spellCheckStart(this.form.N1WB)">	
+				</td>
+				</TD>
+				<input type="hidden" name="hiddenWB" value="WB">
+			  </TR>
+			  <TR class="rwbckgr"> 
+				<TD colspan="2" ></TD>                    
+				<TD width="57%"></TD>
+			  </TR>
+			</TABLE>
+
+	      </TD>
+	    </TR>
+	  </TABLE>
+	  <table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  </td>
+	<td>
+	
+	WB#WB: 1.BJP not opposed to Sethu project,only alignment a problem: Venkiah Naidu 2.Jubilant Team India reaches Mumbai 3.SC Rules not inconsistent with RTI Act:CIC 4.Kolkata:Precious gems seized from air passenger at the NSC Bose International Airport 5.Rain claims 10 lives in southern WB.Pwrd by Headlines Today<br><br>
+	Total Character: 313
+	</td>
+	<td>Taniya Sahni </td>
+	<td>26-September-2007 09:04:02 AM </td>
+</tr>
+</table>
+
+
+		  <p> 
+			<input type="submit" value="Send Content" name="newscontent">
+		  </p>
+	  </form>
+	<p>&nbsp;</p>
+      </div></td>
+  </tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td >
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td class="bottband">
+    <div align="center"> All Rights Reserved &copy; ITGO</div>
+    </td>
+  </tr>
+</table>
+</td>
+  </tr>
+</table>
+</body>
+</html>
